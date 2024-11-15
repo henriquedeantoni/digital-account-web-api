@@ -1,0 +1,9 @@
+﻿services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "Pass@word"
+      ACCEPT_EULA: "Y"  # Aceita o contrato de licença de usuário final.
+      MSSQL_PID: "Developer"  # Especifica a Developer Edition Licenciada gratuitamente do SQL Server para uso de não produção.
+    ports:
+      - "1433:1433"
